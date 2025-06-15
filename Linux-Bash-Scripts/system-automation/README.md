@@ -13,16 +13,16 @@ In this I explain about system-information.sh file.
 
 2.How to view RAM percentage in OS for that I use following commands:
 
-  used=$(free | grep 'Mem' | awk '{print $3}')
-  total=$(free | grep 'Mem' | awk '{print $2}')
-  percentage=$((used * 100 / total))
+  * used=$(free | grep 'Mem' | awk '{print $3}')
+  * total=$(free | grep 'Mem' | awk '{print $2}')
+  * percentage=$((used * 100 / total))
 
   * Generally free command displays RAM in kilobytes not in percentage that's why I use extra commands here.
   * percentage variable is used to calculate RAM in percentage.
 
 3.Disk space in OS,command used :
 
-   df / | grep / | awk '{print $5}' | tr -d '%'
+   * df / | grep / | awk '{print $5}' | tr -d '%'
 
   Terms
 
@@ -31,7 +31,7 @@ In this I explain about system-information.sh file.
 
 4.Show Top 5 memory comsuming process,command used :
 
-  ps aux --sort=%mem | head -n 5
+  * Ps aux --sort=%mem | head -n 5
 
   Terms
 
@@ -41,7 +41,7 @@ In this I explain about system-information.sh file.
 
 5.Monitor server load ,command used:
 
-  uptime | awk '{print $9,$10,$11}'
+  * uptime | awk '{print $9,$10,$11}'
 
   Terms
  
